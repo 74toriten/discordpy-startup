@@ -59,8 +59,7 @@ async def Youtubeにアップしたい(ctx):
     
 @bot.command()
 async def 授業はどこ？(ctx):
-    await ctx.send('#勤怠 のチャンネルをご確認ください')
+    await ctx.send('#勤怠のチャンネルをご確認ください')
 
-heroku scale worker = 1
 
 bot.run(token)
