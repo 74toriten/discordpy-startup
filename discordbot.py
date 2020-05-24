@@ -23,7 +23,17 @@ async def neko(ctx):
     
 @bot.command()
 async def 入部(ctx):
-    await ctx.send('https://youtu.be/wq21u3RrS9M')
+    await ctx.send('部活にはいる方法はこちら'+'https://youtu.be/wq21u3RrS9M')
 
+@bot.command()
+async def 部活リスト(ctx):
+    await ctx.send('''【部活リスト】
+ふくいズンバクラブ 朝会企画部 ラジオ勢 アニメ・マンガ部 
+ マイクラ部 歴史部 読書部 音楽部 いきもの部 鉄道部 料理部
+ ポケモン部 あつもり部 Fortnite部 スプラ部 ボードゲーム部 クイズ部 
+ヨガ部 サッカー部 
+
+【保護者の部活】
+保護者部 運動愛好会''')
 
 bot.run(token)
