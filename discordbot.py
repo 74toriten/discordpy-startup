@@ -20,6 +20,10 @@ async def ping(ctx):
 @bot.command()
 async def neko(ctx):
     await ctx.send('にゃーん')
+    
+@bot.command()
+async def 入部(ctx):
+    await ctx.send('https://youtu.be/wq21u3RrS9M')
 
 
 bot.run(token)
