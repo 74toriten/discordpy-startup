@@ -14,8 +14,8 @@ async def on_command_error(ctx, error):
 
 
 @bot.command()
-async def ねこ(ctx):
-    await ctx.send('にゃ〜ん')
+async def pin(ctx):
+    await ctx.send('pong')
    
 
 
