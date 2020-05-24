@@ -23,7 +23,7 @@ async def neko(ctx):
     
 @bot.command()
 async def 入部(ctx):
-    await ctx.send('部活にはいる方法はこちら'+\n+'https://youtu.be/wq21u3RrS9M')
+    await ctx.send('部活にはいる方法はこちら \n https://youtu.be/wq21u3RrS9M')
 
 @bot.command()
 async def 部活リスト(ctx):
