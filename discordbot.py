@@ -37,4 +37,9 @@ async def 部活リスト(ctx):
 【保護者の部活】
 保護者部 運動愛好会''')
 
+@bot.command()
+async def Youtubeに動画をアップしたい(ctx):
+    await ctx.send('''youtubeへ動画をアップロードする方法は？
+    https://youtu.be/8Par0yc3ZXA''')
+
 bot.run(token)
