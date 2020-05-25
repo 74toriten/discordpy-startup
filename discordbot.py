@@ -57,9 +57,5 @@ async def Youtubeにアップしたい(ctx):
     await ctx.send('''youtubeへ動画をアップロードする方法は？
     https://youtu.be/8Par0yc3ZXA''')
     
-@bot.command()
-async def 授業はどこ？(ctx):
-    await ctx.send('#勤怠のチャンネルをご確認ください')
-
 
 bot.run(token)
