@@ -57,44 +57,7 @@ async def Youtubeにアップしたい(ctx):
     await ctx.send('''youtubeへ動画をアップロードする方法は？
     https://youtu.be/8Par0yc3ZXA''')
 
-@client.event
-async def on_ready():
-    # 起動したらターミナルにログイン通知が表示される
-    print('ログインしました')
 
-# 返信する非同期関数を定義
-async def reply(message):
-    reply = f'{message.author.mention} 呼んだ？' # 返信メッセージの作成
-    await message.channel.send(reply) # 返信メッセージを送信
-
-async def happybirthday(message):
-    reply01 = f'{message.author.mention} 誕生日おめでとう'
-    await message.channel.send(reply01)
-
-async def tanqyoutube(message):
-    reply02 = f'{message.author.mention} https://www.youtube.com/channel/UCEK-5vX5I8rf1Bfcn_QCL4w'
-    await message.channel.send(reply02)
-
-# メッセージ受信時に動作する処理
-@client.event
-async def on_message(message):
-    # メッセージ送信者がBotだった場合は無視する
-    if message.author.bot:
-        return
-    # 「/neko」と発言したら「にゃーん」が返る処理
-    if message.content == '/neko':
-        await message.channel.send('にゃーん')
-    if message.content == '/inu':
-        await message.channel.send('ワン')
-
-    if client.user in message.mentions: # 話しかけられたかの判定
-        contentWithoutMention = message.content[23:]
-        if "誕生日祝って" in contentWithoutMention:
-            await happybirthday(message)
-        elif "探究学舎のYoutube" in contentWithoutMention:
-            await tanqyoutube(message)
-        else:
-            await reply(message) # 返信する非同期関数を実行
     
     
 bot.run(token)
