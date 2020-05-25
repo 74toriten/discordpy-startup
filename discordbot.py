@@ -56,6 +56,11 @@ async def 部活リスト(ctx):
 async def Youtubeにアップしたい(ctx):
     await ctx.send('''youtubeへ動画をアップロードする方法は？
     https://youtu.be/8Par0yc3ZXA''')
-    
 
+@bot.command()
+async def reply(message):
+    reply = f'{message.author.mention} 呼んだ？' # 返信メッセージの作成
+    await message.channel.send(reply) # 返信メッセージを送信
+    
+    
 bot.run(token)
