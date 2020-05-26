@@ -59,7 +59,7 @@ async def Youtubeにアップしたい(ctx):
     https://youtu.be/8Par0yc3ZXA''')
 
 
-@client.command()  
+@bot.command() 
 @commands.has_permissions(administrator=True)  
 async def set_members(ctx):  
     for member in ctx.guild.members:  
