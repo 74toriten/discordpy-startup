@@ -2,6 +2,7 @@ from discord.ext import commands
 import os
 import traceback
 
+
 bot = commands.Bot(command_prefix='/')
 token = os.environ['DISCORD_BOT_TOKEN']
 
@@ -57,5 +58,13 @@ async def Youtubeにアップしたい(ctx):
     await ctx.send('''youtubeへ動画をアップロードする方法は？
     https://youtu.be/8Par0yc3ZXA''')
 
+
+@client.command()  
+@commands.has_permissions(administrator=True)  
+async def set_members(ctx):  
+    for member in ctx.guild.members:  
+        if not member.bot:  
+            role = discord.utils.find(lambda r: r.name == 'member', ctx.guild.roles)  
+            await member.add_roles(role)  
 
 bot.run(token)
