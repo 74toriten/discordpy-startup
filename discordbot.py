@@ -57,7 +57,13 @@ async def Youtubeにアップしたい(ctx):
     await ctx.send('''youtubeへ動画をアップロードする方法は？
     https://youtu.be/8Par0yc3ZXA''')
 
-
+@bot.command()
+async def 授業の録画配信は？(ctx):
+    await ctx.send('「見逃し配信」のチャンネルに次週月曜ごろ投稿されます！')
+    
+@bot.command()
+async def 改行の仕方は？(ctx):
+    await ctx.send('シフト＋リターン（エンター）キーでできます！')
     
     
 bot.run(token)
