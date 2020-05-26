@@ -62,7 +62,7 @@ async def 授業の録画配信は？(ctx):
     await ctx.send('「見逃し配信」のチャンネルに次週月曜ごろ投稿されます！')
     
 @bot.command()
-async def 改行の仕方は？(ctx):
+async def 改行の仕方(ctx):
     await ctx.send('シフト＋リターン（エンター）キーでできます！')
     
     
