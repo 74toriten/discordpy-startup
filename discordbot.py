@@ -13,6 +13,7 @@ async def on_command_error(ctx, error):
     error_msg = ''.join(traceback.TracebackException.from_exception(orig_error).format())
     await ctx.send(error_msg)
 
+ROLE_BASIC_ID = 714843221871689748
 
 @bot.command()
 async def ping(ctx):
@@ -58,16 +59,6 @@ async def Youtubeにアップしたい(ctx):
     await ctx.send('''youtubeへ動画をアップロードする方法は？
     https://youtu.be/8Par0yc3ZXA''')
 
-
-@bot.command() 
-@commands.has_permissions(administrator=True)  
-async def set_members(ctx):  
-    for member in ctx.guild.members:  
-        if not member.bot:  
-            role = discord.utils.find(lambda r: r.name == 'member', ctx.guild.roles)  
-            await member.add_roles(role)  
-
-ROLE_BASIC_ID = 714843221871689748
 
 @bot.command()
 @commands.has_permissions(administrator=True)
