@@ -57,14 +57,14 @@ async def Youtubeにアップしたい(ctx):
     await ctx.send('''youtubeへ動画をアップロードする方法は？
     https://youtu.be/8Par0yc3ZXA''')
 
-ROLE_BASIC_ID = 714843221871689748
+ROLE_BASIC_ID = 714716828961603645
 
 @bot.command()
 @commands.has_permissions(administrator=True)
 async def set_members(ctx):
-    role_basic = ctx.guild.get_role(ROLE_BASIC_ID)
+    海洋生物編 = ctx.guild.get_role(ROLE_BASIC_ID)
     for member in ctx.guild.members:
         if not member.bot:
-            await member.add_roles(role_basic)
+            await member.add_roles(海洋生物編)
 
 bot.run(token)
