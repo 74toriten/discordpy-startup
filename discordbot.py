@@ -62,9 +62,9 @@ ROLE_BASIC_ID = 714716828961603645
 @bot.command()
 @commands.has_permissions(administrator=True)
 async def set_members(ctx):
-    海洋生物編 = ctx.guild.get_role(ROLE_BASIC_ID)
+    role_basic = ctx.guild.get_role(ROLE_BASIC_ID)
     for member in ctx.guild.members:
         if not member.bot:
-            await member.add_roles(海洋生物編)
+            await member.add_roles(role_basic)
 
 bot.run(token)
