@@ -67,4 +67,14 @@ async def set_members(ctx):
             role = discord.utils.find(lambda r: r.name == 'member', ctx.guild.roles)  
             await member.add_roles(role)  
 
+ROLE_BASIC_ID = 714843221871689748
+
+@bot.command()
+@commands.has_permissions(administrator=True)
+async def set_members(ctx):
+    role_basic = ctx.guild.get_role(ROLE_BASIC_ID)
+    for member in ctx.guild.members:
+        if not member.bot:
+            await member.add_roles(role_basic)
+
 bot.run(token)
