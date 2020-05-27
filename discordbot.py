@@ -13,8 +13,6 @@ async def on_command_error(ctx, error):
     error_msg = ''.join(traceback.TracebackException.from_exception(orig_error).format())
     await ctx.send(error_msg)
 
-ROLE_BASIC_ID = 714843221871689748
-
 @bot.command()
 async def ping(ctx):
     await ctx.send('pong')
@@ -59,6 +57,7 @@ async def Youtubeにアップしたい(ctx):
     await ctx.send('''youtubeへ動画をアップロードする方法は？
     https://youtu.be/8Par0yc3ZXA''')
 
+ROLE_BASIC_ID = 714843221871689748
 
 @bot.command()
 @commands.has_permissions(administrator=True)
