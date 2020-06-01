@@ -57,7 +57,7 @@ async def Youtubeにアップしたい(ctx):
     await ctx.send('''youtubeへ動画をアップロードする方法は？
     https://youtu.be/8Par0yc3ZXA''')
 
-ROLE_BASIC_ID = 714459089496834080
+ROLE_BASIC_ID = 715076110609809461
 
 @bot.command()
 @commands.has_permissions(administrator=True)
