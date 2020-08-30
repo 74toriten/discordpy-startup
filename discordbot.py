@@ -67,4 +67,15 @@ async def set_members(ctx):
         if not member.bot:
             await member.add_roles(role_basic)
 
+ # roleコマンドのサブコマンド
+ # 指定したユーザーから指定した役職を剥奪する。
+ROLE_BASIC_ID =714680302760362004
+ @bot.command()
+ @commands.has_permissions(administrator=True)
+ async def remove(ctx):
+        role_basic= ctx.guild.remove_role(ROLE_BASIC_ID)
+        await member.remove_roles(ROLE_BASIC_ID)
+        
+
+
 bot.run(token)
