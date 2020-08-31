@@ -76,6 +76,4 @@ ROLE_BASIC_ID =714680302760362004
         role_basic= ctx.guild.remove_role(ROLE_BASIC_ID)
         await member.remove_roles(ROLE_BASIC_ID)
         
-
-
 bot.run(token)
